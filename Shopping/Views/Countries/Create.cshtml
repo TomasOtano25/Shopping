@@ -1,4 +1,4 @@
-﻿@model Shopping.Data.Entities.Country
+﻿@model Shopping.Data.Entities.Directory.Country
 
 @{
     ViewData["Title"] = "Create";
@@ -16,6 +16,16 @@
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TwoLetterIsoCode" class="control-label"></label>
+                <input asp-for="TwoLetterIsoCode" class="form-control" />
+                <span asp-validation-for="TwoLetterIsoCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThreeLetterIsoCode" class="control-label"></label>
+                <input asp-for="ThreeLetterIsoCode" class="form-control" />
+                <span asp-validation-for="ThreeLetterIsoCode" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

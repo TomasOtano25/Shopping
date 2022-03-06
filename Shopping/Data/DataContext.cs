@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shopping.Data.Entities;
+using Shopping.Data.Entities.Directory;
 
 namespace Shopping.Data
 {
