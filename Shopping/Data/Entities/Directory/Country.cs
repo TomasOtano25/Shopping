@@ -12,6 +12,14 @@ namespace Shopping.Data.Entities.Directory
         public string Name { get; set; }
 
         /// <summary>
+        /// Obtine o estable los estados de un pais
+        /// </summary>
+        public ICollection<State> States { get; set; }
+
+        [Display(Name = "Provincias/Estados")]
+        public int StatesNumber => States == null ? 0 : States.Count;
+
+        /// <summary>
         /// Obtiene o establece un valor que indica si se permite la facturación en este país
         /// </summary>
         public bool AllowsBilling { get; set; }
