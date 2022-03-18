@@ -1,19 +1,18 @@
-﻿@model Shopping.Data.Entities.Directory.Country
-
+﻿@model Shopping.Data.Entities.Category
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
-<h4>Country</h4>
+<h4>Categoria</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
-            <partial name="_Country" />
+            <partial name="_Category" />
 
             <div class="form-group mt-2">
                 <input type="submit" value="Crear" class="btn btn-outline-primary" />
