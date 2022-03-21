@@ -12,5 +12,7 @@ namespace Shopping.Data.Entities.Directory
         public string Name { get; set; }
 
         public State State { get; set; }
+
+        public ICollection<User> Users { get; set; }
     }
 }
