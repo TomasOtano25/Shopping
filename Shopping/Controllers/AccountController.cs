@@ -51,6 +51,13 @@ namespace Shopping.Controllers
             return View();
         }
 
+        public IActionResult Register()
+        {
+
+
+            return View();
+        }
+
         public IActionResult ChangeUser()
         {
             return View();
