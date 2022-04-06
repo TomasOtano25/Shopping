@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Shopping.Data;
 using Shopping.Data.Entities;
 
 namespace Shopping.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoriesController : Controller 
     {
         private readonly DataContext _context;
@@ -19,6 +21,7 @@ namespace Shopping.Controllers
             return View( await _context.Categories.ToListAsync());
         }
 
+        
         public IActionResult Create()
         {
             return View();
@@ -57,6 +60,7 @@ namespace Shopping.Controllers
             return View(category);
         }
 
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
